@@ -1,0 +1,14 @@
+  app.c (app.h)
+   Endless loops, which execute tasks with fixed computing time. This 
+   sequential execution is only deviated from when an interrupt event occurs.
+   
+   'task_cfg_t' es una estructura que tiene 3 datos, los cuales son punteros. 2 son a 
+	funciones y el restante es un puntero al parámetro de al función.
+
+	'task_dta_t' es una estructura que tiene un valor en uint32_t. 
+
+	'task_cfg_t' es un arreglo que contiene punteros a funciones y parámetros de estas.
+   
+   
+
+...

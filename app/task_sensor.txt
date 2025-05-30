@@ -1,0 +1,14 @@
+  task_sensor.c (task_sensor.h, task_sensor_attribute.h) 
+   Non-Blocking & Update By Time Code -> Sensor Modeling
+  
+  En el archivo task_sensor_attribute.h:
+  	'task_sensor_ev' define los eventos con un tipo enumerativo y 'task_sensor_st' los estados de la misma forma.
+  	'task_sensor_id' define un identificador para el sensor.
+  	'task_sensor_cfg_t' es una estructura que contiene los atributos del sensor.
+  	'task_sensor_dta_t' es una estructura que tiene como campos: la guarda, los eventos y los estados.
+  
+  En el archivo task_sensor.c:
+  	'task_sensor_cfg_list' es un arreglo de tipo enumerativo que contiene las configuraciones del sensor.
+  	'task_sensor_dta_list' es un arreglo de tipo enumerativo que contiene los datos del sensor.
+  
+...
