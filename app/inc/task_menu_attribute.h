@@ -71,7 +71,11 @@ typedef enum task_menu_ev {EV_MEN_ENT_IDLE,
 
 /* State of Task Menu */
 typedef enum task_menu_st {ST_MENU_1,
-	ST_MENU_2, ST_POWER, ST_SPEED, ST_SPIN} task_menu_st_t;
+		                   ST_MENU_2,
+						   ST_POWER,
+						   ST_SPEED,
+						   ST_SPIN,
+						   ST_MEN_XX_IDLE} task_menu_st_t;
 
 #define QTY_MOTORS 2
 

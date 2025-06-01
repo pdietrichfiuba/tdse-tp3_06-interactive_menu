@@ -207,7 +207,7 @@ void displayCharPositionWrite( uint8_t charPositionX, uint8_t charPositionY )
                               DISPLAY_IR_SET_DDRAM_ADDR |
                               ( DISPLAY_20x4_LINE1_FIRST_CHARACTER_ADDRESS +
                                 charPositionX ) );
-            //HAL_Delay(1);
+            HAL_Delay(1);
         break;
 
         case 1:
@@ -215,7 +215,7 @@ void displayCharPositionWrite( uint8_t charPositionX, uint8_t charPositionY )
                               DISPLAY_IR_SET_DDRAM_ADDR |
                               ( DISPLAY_20x4_LINE2_FIRST_CHARACTER_ADDRESS +
                                 charPositionX ) );
-            //HAL_Delay(1);
+            HAL_Delay(1);
         break;
 
         case 2:
@@ -223,7 +223,7 @@ void displayCharPositionWrite( uint8_t charPositionX, uint8_t charPositionY )
                               DISPLAY_IR_SET_DDRAM_ADDR |
                               ( DISPLAY_20x4_LINE3_FIRST_CHARACTER_ADDRESS +
                                 charPositionX ) );
-            //HAL_Delay(1);
+            HAL_Delay(1);
         break;
 
         case 3:
@@ -231,7 +231,7 @@ void displayCharPositionWrite( uint8_t charPositionX, uint8_t charPositionY )
                               DISPLAY_IR_SET_DDRAM_ADDR |
                               ( DISPLAY_20x4_LINE4_FIRST_CHARACTER_ADDRESS +
                                 charPositionX ) );
-            //HAL_Delay(1);
+            HAL_Delay(1);
         break;
     }
 }
@@ -309,12 +309,12 @@ static void displayDataBusWrite( uint8_t dataBus )
         case DISPLAY_CONNECTION_GPIO_4BITS:
             if ( initial8BitCommunicationIsCompleted == true) {
                 displayPinWrite( DISPLAY_PIN_EN, ON );
-                //HAL_Delay(1);
-                display_delay_us(DISPLAY_DEL_01US);
+                HAL_Delay(1);
+                //display_delay_us(DISPLAY_DEL_01US);
 
                 displayPinWrite( DISPLAY_PIN_EN, OFF );
-                //HAL_Delay(1);
-                display_delay_us(DISPLAY_DEL_37US);
+                HAL_Delay(1);
+                //display_delay_us(DISPLAY_DEL_37US);
 
                 displayPinWrite( DISPLAY_PIN_D7, dataBus & 0b00001000 );
                 displayPinWrite( DISPLAY_PIN_D6, dataBus & 0b00000100 );
@@ -325,12 +325,12 @@ static void displayDataBusWrite( uint8_t dataBus )
 
     }
     displayPinWrite( DISPLAY_PIN_EN, ON );
-    //HAL_Delay(1);
-    display_delay_us(DISPLAY_DEL_01US);
+    HAL_Delay(1);
+    //display_delay_us(DISPLAY_DEL_01US);
 
     displayPinWrite( DISPLAY_PIN_EN, OFF );
-    //HAL_Delay(1);
-    display_delay_us(DISPLAY_DEL_37US);
+    HAL_Delay(1);
+    //display_delay_us(DISPLAY_DEL_37US);
 }
 
 void display_delay_us(uint32_t delay_us)

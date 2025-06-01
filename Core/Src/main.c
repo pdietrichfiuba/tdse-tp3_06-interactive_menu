@@ -26,10 +26,12 @@
 #include "logger.h"
 #include "dwt.h"
 
+
 /* Application includes. */
 #include "app.h"
 
 /* USER CODE END Includes */
+#include "display.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
@@ -86,6 +88,8 @@ int main(void)
 
   /* USER CODE BEGIN Init */
 
+ // displayInit( DISPLAY_CONNECTION_GPIO_4BITS );
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -115,6 +119,9 @@ int main(void)
 
 	  /* Application Update */
 	  app_update();
+
+	  //displayCharPositionWrite ( 0,0 );
+	  //displayStringWrite( "Temperature:" );
   }
   /* USER CODE END 3 */
 }
